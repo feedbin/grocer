@@ -135,6 +135,26 @@ notification = Grocer::NewsstandNotification.new(device_token: "...")
 # {"aps": {"content-available":1}}
 ````
 
+#### Safari Push Notifications
+
+Grocer can be used for [Safari Push Notifications](https://developer.apple.com/notifications/safari-push-notifications/) introduced in Mavericks.
+
+```
+Grocer::Notification.new(
+  device_token: device_token,
+  custom: {
+    aps: {
+      alert: {
+        title: "Notification Title",
+        body: "Notification Body",
+        action: "View"
+      },
+      :"url-args" => ["ARG1", "ARG2"]
+    }
+  }
+)
+```
+
 ### Feedback
 
 ```ruby
