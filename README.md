@@ -139,7 +139,7 @@ notification = Grocer::NewsstandNotification.new(device_token: "...")
 
 Grocer can be used for [Safari Push Notifications](https://developer.apple.com/notifications/safari-push-notifications/) introduced in Mavericks.
 
-```
+```ruby
 Grocer::Notification.new(
   device_token: device_token,
   custom: {
